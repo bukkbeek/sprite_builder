@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 216 34% 62%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
+
+    --radius: 0.5rem;
+    
+    --panel-background: 0 0% 100% / 90%;
+    --panel-foreground: 222 47% 11%;
+  }
+
+  .dark {
+    --background: 210 20% 15%;
+    --foreground: 210 40% 90%;
+
+    --card: 210 20% 20%;
+    --card-foreground: 210 40% 90%;
+
+    --popover: 210 20% 20%;
+    --popover-foreground: 210 40% 90%;
+
+    --primary: 210 40% 90%;
+    --primary-foreground: 210 20% 15%;
+
+    --secondary: 210 30% 25%;
+    --secondary-foreground: 210 40% 90%;
+
+    --muted: 210 30% 25%;
+    --muted-foreground: 210 50% 70%;
+
+    --accent: 210 40% 60%;
+    --accent-foreground: 210 40% 90%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 210 40% 90%;
+
+    --border: 210 30% 30%;
+    --input: 210 30% 30%;
+    --ring: 210 30% 50%;
+    
+    --panel-background: 210 20% 20%;
+    --panel-foreground: 210 40% 90%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  #root {
+    @apply h-screen w-screen p-0 m-0 overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .panel {
+    @apply bg-panel border border-border/40 backdrop-blur-md rounded-lg shadow-md;
+  }
+  
+  .button-icon {
+    @apply h-8 w-8 p-1.5 rounded-md bg-background/80 border border-border/60 hover:bg-accent hover:text-accent-foreground transition-all duration-200;
+  }
+  
+  .button-icon-small {
+    @apply h-7 w-7 p-1.5 rounded-md bg-background/80 border border-border/60 hover:bg-accent hover:text-accent-foreground transition-all duration-200;
+  }
+  
+  .panel-label {
+    @apply text-xs uppercase tracking-widest font-medium text-muted-foreground;
+  }
+  
+  .animate-control {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .glass-panel {
+    @apply backdrop-blur-lg bg-white/90 dark:bg-black/80 border border-white/20 dark:border-white/10 shadow-lg;
+  }
+  
+  .loading-spinner {
+    @apply w-10 h-10 border-4 border-accent border-t-transparent rounded-full animate-spin;
+  }
+}
