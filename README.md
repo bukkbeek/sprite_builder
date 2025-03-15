@@ -2,6 +2,8 @@
 
 *easy image export from 3D assets*
 
+visit https://bukkbeek.itch.io/sprite-builder to preview/ download compiled windows version
+
 A desktop application for converting 3D GLB models into sprite sheets and animated sequences. Designed for game developers, animators, and 3D artists who need to create high-quality 2D sprite assets from 3D models.
 
 - **Easy pixel art from anmated 3D models**
