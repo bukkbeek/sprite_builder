@@ -1,3 +1,10 @@
+
+
+#Please visit https://github.com/bukkbeek/GodotPixelRenderer for a more updated tool!
+
+
+
+
 # Sprite Builder
 
 *easy image export from 3D assets*
